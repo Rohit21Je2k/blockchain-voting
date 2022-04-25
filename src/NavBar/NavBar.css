@@ -1,0 +1,23 @@
+.navbar {
+  position: relative;
+}
+.navbar .wrapper {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(97, 97, 97);
+}
+
+.navbar-logo img {
+  width: 40px;
+  height: 40px;
+}

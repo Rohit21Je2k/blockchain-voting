@@ -1,0 +1,31 @@
+.home {
+  padding: 50px;
+  height: 500px;
+}
+
+.home .wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.home .col-1,
+.home .col-2 {
+  width: 50%;
+}
+
+.home .col-1 h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.home .col-1 h4 {
+  width: 350px;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.home .col-2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

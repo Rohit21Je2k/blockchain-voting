@@ -1,0 +1,13 @@
+.voting {
+  padding: 30px;
+  text-align: center;
+}
+
+.voting h1 {
+  margin-bottom: 40px;
+}
+
+.voting .container {
+  display: flex;
+  justify-content: space-evenly;
+}

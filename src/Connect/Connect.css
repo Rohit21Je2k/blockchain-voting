@@ -1,0 +1,31 @@
+.connect {
+  padding: 50px;
+  height: 500px;
+}
+
+.connect .wrapper {
+  display: flex;
+}
+
+.connect .col-1 {
+  margin-top: 80px;
+}
+
+.connect .col-1 .btn {
+  width: 300px;
+}
+
+.connect .col-1 h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.connect .col-1 h5 {
+  font-size: 22px;
+  color: var(--gray);
+  margin-bottom: 40px;
+}
+
+.connect .col-2 img {
+  margin-left: 150px;
+}
