@@ -46,7 +46,7 @@ export default function Results(props) {
               </div>
             </div>
             <button onClick={updateResults} className="btn update">
-              Update Results
+              Show Results
             </button>
           </>
         )}

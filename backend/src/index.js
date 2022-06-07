@@ -36,11 +36,12 @@ app.use((req, res) => {
 });
 
 // connect mongoose
+
 mongoose
-  .connect(
-    `mongodb+srv://${DB_USER}:${DB_PASSWORD}@cluster0.s4fs8.mongodb.net/${DB_NAME}?retryWrites=true&w=majority`,
-    { useNewUrlParser: true, useUnifiedTopology: true }
-  )
+  .connect(`mongodb://localhost:27017/blockchain`, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => {
     app.listen(PORT, () => {
       console.log("connection to server and database established");

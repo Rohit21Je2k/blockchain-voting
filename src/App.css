@@ -79,3 +79,18 @@ body {
   margin-top: 20px;
   width: 180px;
 }
+
+.error-card {
+  background-color: hsl(355, 70%, 91%);
+  border: 3px solid black;
+  border-color: hsl(355, 70%, 71%);
+  color: #721c24;
+  box-shadow: rgba(243, 144, 135, 0.2) 0px 7px 29px 0px;
+}
+
+.success-card {
+  background-color: hsl(134, 41%, 88%);
+  border: 3px solid black;
+  border-color: hsl(134, 41%, 68%);
+  box-shadow: rgba(169, 243, 135, 0.2) 0px 7px 29px 0px;
+}

@@ -53,13 +53,17 @@ export default function NavBarDesktop(props) {
       >
         Home
       </Link>
-      <Link
-        to="/connect"
-        onClick={handleClick(2)}
-        className={`navbar-desktop__link ${menuNum === 2 ? "selected" : null}`}
-      >
-        Connect Your Wallet
-      </Link>
+      {!account && (
+        <Link
+          to="/connect"
+          onClick={handleClick(2)}
+          className={`navbar-desktop__link ${
+            menuNum === 2 ? "selected" : null
+          }`}
+        >
+          Connect Your Wallet
+        </Link>
+      )}
       {account && (
         <>
           <Link
@@ -80,15 +84,17 @@ export default function NavBarDesktop(props) {
           >
             Voting
           </Link>
-          <Link
-            to="/results"
-            onClick={handleClick(5)}
-            className={`navbar-desktop__link ${
-              menuNum === 5 ? "selected" : null
-            }`}
-          >
-            Results
-          </Link>
+          {account == "0xa47c89c5dc1f8f102cb594c6e9cc8f7d987584cd" && (
+            <Link
+              to="/results"
+              onClick={handleClick(5)}
+              className={`navbar-desktop__link ${
+                menuNum === 5 ? "selected" : null
+              }`}
+            >
+              Results
+            </Link>
+          )}
           <button onClick={handleLogout} className="btn">
             Logout
           </button>

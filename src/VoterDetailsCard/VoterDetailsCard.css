@@ -1,0 +1,25 @@
+.voter-card {
+  width: 800px;
+  display: flex;
+  gap: 50px;
+  margin: 0 auto;
+}
+
+.voter-card .details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.voter-card .details p {
+  all: unset;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--gray);
+}
+
+.voter-card img {
+  width: 120px;
+  height: 120px;
+}

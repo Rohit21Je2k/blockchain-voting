@@ -11,3 +11,15 @@
   display: flex;
   justify-content: space-evenly;
 }
+
+.voting .error-card,
+.voting .success-card {
+  margin-top: 30px;
+  width: 500px;
+  margin-inline: auto;
+}
+
+.voting .error-card h2,
+.voting .success-card h2 {
+  margin-bottom: 20px;
+}

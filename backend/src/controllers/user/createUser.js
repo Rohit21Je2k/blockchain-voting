@@ -5,6 +5,11 @@ const createUser = async (req, res) => {
   try {
     const { name, address, age, department, designation } = req.body;
 
+    const existingUser = await User.findOne({ address: address });
+    if (existingUser) {
+      throw httpError("User already Exist");
+    }
+
     const createdUser = new User({
       name,
       address,
@@ -19,6 +24,9 @@ const createUser = async (req, res) => {
       message: "User successfully created",
     });
   } catch (err) {
+    if (err.error) {
+      return res.status(422).send(err);
+    }
     res.status(422).send(httpError("Failed to create User"));
   }
 };

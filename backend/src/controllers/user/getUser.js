@@ -12,6 +12,9 @@ const getUser = async (req, res) => {
 
     res.status(200).send(user);
   } catch (err) {
+    if (err.error) {
+      return res.status(422).send(err);
+    }
     res.status(422).send(httpError("couldn't get user data"));
   }
 };
