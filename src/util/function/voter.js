@@ -1,11 +1,11 @@
 export const getVoters = () => {
   const voters = localStorage.voters;
-  return JSON.parse(voters);
+  return voters;
 };
 
 export const addVoter = (newVoter) => {
   const voters = getVoters();
-  localStorage.voters = JSON.stringify([...voters, newVoter]);
+  localStorage.voters = [...voters, newVoter];
 };
 
 export const hasVoted = (voter) => {

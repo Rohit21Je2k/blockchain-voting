@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import person from "../assets/person.png";
 import makeVote from "../util/api/makeVote.js";
-import { getVoters, setVoters } from "../util/api/localStorage";
+import { addVoter, hasVoted } from "../util/api/localStorage";
 import "./Voting.css";
 
 export default function Voting(props) {
@@ -24,12 +24,12 @@ export default function Voting(props) {
   const handleVote = (candidate) => {
     return async () => {
       setSuccess(null);
-      const voters = getVoters();
-      if (voters.includes(account)) {
+      if (hasVoted(account)) {
         console.log(account);
         setError("You have already Voted");
         return;
       }
+
       try {
         const data = await makeVote(account, 1);
         setError(null);
@@ -40,7 +40,7 @@ export default function Voting(props) {
           makeVoteHandler2();
         }
 
-        setVoters(account);
+        addVoter(account);
       } catch (err) {
         setError(err);
         console.log(err);
